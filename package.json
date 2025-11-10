@@ -1,0 +1,21 @@
+{
+  "name": "rs-battleship",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "ts",
+    "nodejs",
+    "game"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-SlavikusVOG:SlavikusVOG/rs-battleship.git"
+  },
+  "license": "ISC",
+  "author": "SlavikusVOG",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
