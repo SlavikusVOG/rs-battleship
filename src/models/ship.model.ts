@@ -13,6 +13,7 @@ export interface IRequestAddShip {
   data: {
     gameId: number | string,
     ships: IShip[],
+    indexPlayer: number | string,
   };
   id: 0;
 }
@@ -21,7 +22,7 @@ export interface IResponseStartGame {
   type: "start_game";
   data: {
     ships: IShip[],
-    currentPlayerIndex: number | string
+    currentPlayerIndex: number | string,
   };
   id: 0;
 }

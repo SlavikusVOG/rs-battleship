@@ -3,8 +3,9 @@ import type { ICoordinates } from "./coordinates.model.js";
 import type { IShip } from "./ship.model.js";
 
 export interface IGame {
-  gameId: string;
+  gameId: string | number;
   ships: IShip[];
+  idPlayer: number | string
 }
 
 export interface IRequestGameAttack {

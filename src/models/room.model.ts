@@ -1,11 +1,11 @@
 import type { IPlayer } from "./player.model.js";
 
 export interface IRoom {
-  roomId: string;
+  roomId: string | number;
   roomUsers: IPlayer[];
 }
 
-export interface IRequestRoom {
+export interface IRequestCreateRoom {
   type: "create_room";
   data: "";
   id: 0;

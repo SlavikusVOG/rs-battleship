@@ -1,9 +1,11 @@
 import type { IShip } from "./ship.model.js";
 
 export interface IPlayer {
-    index: string;
+    index: string | number;
     name: string;
     password: string;
-    roomId: string;
-    ship: IShip;
+    wins: number;
+    roomId?: string | number;
+    gameId?: string | number;
+    ships?: IShip[];
 }
