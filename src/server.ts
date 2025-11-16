@@ -1,6 +1,5 @@
 import WebSocket, { WebSocketServer } from 'ws';
 import http from 'node:http';
-import { error } from 'node:console';
 
 export class Server {
   private readonly wsServer: WebSocketServer;
