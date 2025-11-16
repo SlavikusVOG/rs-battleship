@@ -1,12 +1,1 @@
-enum ShipClassEnum {
-    Frigate,
-    Destroyer,
-    Cruiser,
-    BattleCruiser,
-    BattleShip,
-    Carrier,
-    Dreadnought,
-    Titan,
-}
-
-export type ShipClass = ShipClassEnum;
+export type ShipClass = "small" | "medium" | "large" | "huge";
