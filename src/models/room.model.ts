@@ -1,4 +1,4 @@
-import { IPlayer } from "./player.model";
+import type { IPlayer } from "./player.model.js";
 
 export interface IRoom {
     id: string;

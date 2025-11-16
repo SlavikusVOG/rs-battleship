@@ -1,4 +1,4 @@
-import { ShipClass } from "../types/shipClass.type";
+import type { ShipClass } from "../types/shipClass.type.js";
 
 export interface IShip {
     id: string;
