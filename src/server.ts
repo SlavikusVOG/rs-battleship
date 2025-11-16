@@ -1,5 +1,6 @@
 import WebSocket, { WebSocketServer } from 'ws';
 import http from 'node:http';
+import type { WsMessage } from './models/message.model.js';
 
 export class Server {
   private readonly wsServer: WebSocketServer;
@@ -36,8 +37,11 @@ export class Server {
   }
 
   setupEventHandlers () {
-    this.wsServer.on('connection', (/* ws, req */) => {
+    this.wsServer.on('connection', ( ws ) => {
       // TODO: implement
+      ws.on('error', console.error);
+      
+      ws.on('message', this.handleMessage)
     });
 
     this.wsServer.on('error', (error) => {
@@ -47,5 +51,44 @@ export class Server {
     this.wsServer.on('close', () => {
       console.log('ws server closed');
     })
+  }
+
+  private async handleMessage(
+    message: WsMessage
+  ) {
+    try {
+      switch (message.type) {
+        case 'reg': {
+          
+          break;
+        }
+        case 'create_game': {
+          break;
+        }
+        case 'start_game': {
+          break;
+        }
+        case 'turn': {
+          break;
+        }
+        case 'attack': {
+          break;
+        }
+        case 'finish': {
+          break;
+        }
+        case 'update_room': {
+          break;
+        }
+        case 'update_winners': {
+          break;
+        }
+      }
+    }
+    catch(error) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
+    }
   }
 }
